@@ -1,0 +1,13 @@
+version: "2"
+
+services:
+  mtproxy:
+    image: mtproxy:test
+    container_name: tg-mtproxy
+    user: root
+    restart: always
+    environment:
+      SECRET: 84752a8d66d66d1dbea554d89010fb3e
+    ports:
+      - "4443:443"
+      - "8888:8888"
